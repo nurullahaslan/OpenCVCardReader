@@ -23,12 +23,17 @@ android {
     }
 }
 repositories {
-    maven { url "https://jitpack.io" }
     google()
+    maven { url "https://www.jitpack.io" }
+    maven { url "https://maven.google.com" }
+    jcenter()
+
 }
 buildscript {
     repositories {
         google()
+        maven { url "https://maven.google.com" }
+        jcenter()
     }
 
     // move it here
@@ -48,10 +53,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.android.support:design:28.1.1'
     implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.+'
-    implementation 'com.google.android.gms:play-services-vision:19.0.2'
+    implementation 'com.google.android.gms:play-services-vision:20.1.2'
     implementation project(path: ':sdk')
-    implementation 'com.google.firebase:firebase-core:17.0.0'
-    implementation 'com.google.firebase:firebase-ml-vision:24.+'
 
 
 

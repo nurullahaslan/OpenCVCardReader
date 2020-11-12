@@ -21,7 +21,6 @@ import com.google.android.gms.vision.Frame;
 import com.google.android.gms.vision.text.TextBlock;
 import com.google.android.gms.vision.text.TextRecognizer;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.FirebaseApp;
 import com.theartofdev.edmodo.cropper.CropImage;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -101,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         imageView = findViewById(R.id.imageView);
         setSupportActionBar(toolbar);
-        FirebaseApp.initializeApp(this.getApplicationContext());
         fab = findViewById(R.id.fab);
         fabNext = findViewById(R.id.floatingActionButton);
         fabCancel = findViewById(R.id.floatingActionButton3);
@@ -233,9 +231,9 @@ public class MainActivity extends AppCompatActivity {
             txtName.setVisibility(View.GONE);
             txtPhone.setVisibility(View.GONE);
             txtMail.setVisibility(View.GONE);
-            //txtMail.setText("");
-            //txtName.setText("");
-            //txtPhone.setText("");
+            txtMail.setText("");
+            txtName.setText("");
+            txtPhone.setText("");
             txtView.setVisibility(View.GONE);
             txtView2.setVisibility(View.GONE);
             spinner.setVisibility(View.GONE);
